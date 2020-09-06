@@ -1,0 +1,7 @@
+FROM tomcat:alpine
+MAINTAINER=deepakmadan
+RUN wget -O /usr/local/tomcat/webapps/demosampleapplication.war  http://localhost:8082/artifactory/libs-snapshot-local/com/nagarro/devops-tools/devops/demosampleapplication/1.0.0-SNAPSHOT/demosampleapplication-1.0.0-20200905.185315-2.war
+
+EXPOSE 8083
+
+CMD /usr/local/tomcat/bin/cataline.bat run
